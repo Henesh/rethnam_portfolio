@@ -2,6 +2,9 @@
 // Every fact below is taken from Kanaga's resume. Items marked `placeholder`
 // are intentionally left for Kanaga to fill in — do not invent figures.
 
+// Prefix for files in /public so they resolve under any deploy path (e.g. GitHub Pages sub-folder)
+const asset = (p: string) => `${import.meta.env.BASE_URL}${p}`;
+
 export const profile = {
   firstName: 'Kanaga',
   lastName: 'Rethnam',
@@ -13,10 +16,10 @@ export const profile = {
   phoneHref: 'tel:+60112061225',
   location: 'Cheras, Selangor, Malaysia',
   linkedin: 'https://linkedin.com/in/kanaga-rethnam-72878a360',
-  resume: '/resume/Kanaga_Rethnam_Resume.pdf',
+  resume: asset('resume/Kanaga_Rethnam_Resume.pdf'),
   resumeFileName: 'Kanaga_Rethnam_Resume.pdf',
-  portrait: { webp: '/images/kanaga-portrait.webp', jpg: '/images/kanaga-portrait.jpg' },
-  aboutPhoto: { webp: '/images/kanaga-about.webp', jpg: '/images/kanaga-about.jpg' },
+  portrait: { webp: asset('images/kanaga-portrait.webp'), jpg: asset('images/kanaga-portrait.jpg') },
+  aboutPhoto: { webp: asset('images/kanaga-about.webp'), jpg: asset('images/kanaga-about.jpg') },
   heroIntro: [
     "I'm a Financial Technology graduate from Universiti Tunku Abdul Rahman with an interest in digital banking, financial data analysis, cybersecurity, and financial transformation.",
     'I enjoy exploring how technology and data can improve financial services, strengthen operational processes, and enhance customer trust in digital banking.',
